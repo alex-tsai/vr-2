@@ -5,7 +5,7 @@ var posToObj = function(str) {
 		y: temp[1],
 		z: temp[2]
 	};
-	return obj
+	return obj;
 };
 var posToStr = function(obj) {
 	return obj.x + " " + obj.y + " " + obj.z;
@@ -19,8 +19,8 @@ $(document).ready(function(){
 		for(var x = 0; x < 6; x++)
 		{
 			var pvt = $('<a-plane rotation="0 ' + 30*x + ' 0" height="0" width="0" position="0 0 0"></a-plane>');
-			var tick = $('<a-cube rotation="0 '+ (Math.random()*20+20) + ' '+ (Math.random()*20+20) + '" position="0 0 0" width="0.3" height="0.3" depth="0.3"></a-cube>');
-			var pos_ani = $('<a-animation attribute="position" from="4 1.9 0" to="4 2.1 0" dur="' + (1000-Math.random()*50+100) + '" fill="forwards" direction="alternate" repeat="indefinite"></a-animation>')
+			var tick = $('<a-sphere color="#333" position="0 0 0" radius="0.07"></a-cube>');
+			var pos_ani = $('<a-animation attribute="position" from="4 1.9 ' + Math.random()*0.5 + '" to="4 2.1 0" dur="' + (1000-Math.random()*50+100) + '" fill="forwards" direction="alternate" repeat="indefinite"></a-animation>' + '<a-mouseenter scale="2 2 2" color="#AA6677"></a-mouseenter>');
 			p.append(pvt);
 			pvt.append(tick);
 			tick.append(pos_ani);
@@ -28,3 +28,4 @@ $(document).ready(function(){
 		}
 	}	
 });
+
