@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Dots</title>
+    <title>Test</title>
     <meta name="description" content="VR Test">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
@@ -13,9 +13,9 @@
 
       <!-- Cursor-->
       <a-camera position="0 1.8 4" cursor-visible="true" cursor-scale="2" cursor-color="#AA6677" cursor-offset="2" cursor-maxdistance="100" cursor-radius="0.1" cursor-opacity="0.5"></a-camera>
-
-      <a-sky color="#EFEFEF"></a-sky>
-
+      <a-entity position="0 0 -3">
+        <a-model src="test.dae" rotation="90 0 0" scale="18 18 18"></a-model>
+      </a-entity>
     </a-scene>
   </body>
 </html>
